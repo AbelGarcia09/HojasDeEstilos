@@ -29,14 +29,10 @@ public class App extends Application {
         
         Scene scene = new Scene(raiz);
         stage.setScene(scene);
+        //Tamaño fijo
         stage.setResizable(false);
         stage.show();
         
-    }
-
-    //Método getStage para poder utilizar el Stage en otras clases
-    public static Stage getStage(){
-        return escena;
     }
 
     public static void main(String[] args) {

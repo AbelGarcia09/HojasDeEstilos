@@ -36,11 +36,14 @@ public class Controlador implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        //Se crea un array con el nombre de las operaciones
         String[] operaciones = {"Sumar", "Restar", "Multiplicar", "Dividir"};
         
+        //Se añaden al choicebox
         choiceBox.setItems(FXCollections.observableArrayList(operaciones));
         choiceBox.getSelectionModel().select(0);
         
+        //Se añaden los elementos del observableList al ListView
         listView.setItems(ol);
 
     }
@@ -48,25 +51,33 @@ public class Controlador implements Initializable {
     @FXML
     private void accionBoton(ActionEvent event) {
         
+        //Se intenta convertir a "int" el texto de los textField.
+        //Si se produce una excepción, salta un error pidiendo que se añadan solo números.
         try {
-            int numero1 = Integer.parseInt(num1.getText());
-            int numero2 = Integer.parseInt(num2.getText());
-            
+            double numero1 = Double.parseDouble(num1.getText());
+            double numero2 = Double.parseDouble(num2.getText());
+            //Se comprueba el texto del item seleccionado en el choicebox
+            //Se actúa dependiendo de cual esté seleccionado
             switch (choiceBox.getSelectionModel().getSelectedItem()) {
                     case "Sumar":
+                        //Se añade el resultado al Textfield y a la lista.
                         resultado.setText(""+(numero1+numero2));
+                        ol.add(resultado.getText() + " (Suma)");
                         break;
                     case "Restar":
                         resultado.setText(""+(numero1-numero2));
+                        ol.add(resultado.getText() + " (Resta)");
                         break;
                     case "Multiplicar":
                         resultado.setText(""+(numero1*numero2));
+                        ol.add(resultado.getText() + " (Multiplicación)");
                         break;
                     case "Dividir":
                         resultado.setText(""+(numero1/numero2));
+                        ol.add(resultado.getText() + " (División)");
                         break;
             }
-            ol.add(resultado.getText());
+
         } catch (NumberFormatException e) {
             Alert fallo = new Alert(Alert.AlertType.ERROR);
             fallo.setHeaderText("Introduce números enteros");
