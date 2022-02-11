@@ -6,36 +6,47 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="340.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.ideas.controller.Controlador">
+<AnchorPane fx:id="ap" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="340.0" stylesheets="@css/estilo.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.ideas.controller.Controlador">
    <children>
-      <TextField fx:id="num1" layoutX="151.0" layoutY="48.0" />
-      <TextField fx:id="num2" layoutX="151.0" layoutY="99.0" />
-      <Label layoutX="39.0" layoutY="52.0" text="Número 1" AnchorPane.rightAnchor="162.6">
+      <TextField fx:id="num1" layoutX="151.0" layoutY="48.0" prefHeight="35.0" prefWidth="138.0" />
+      <TextField fx:id="num2" layoutX="151.0" layoutY="99.0" prefHeight="22.0" prefWidth="138.0" />
+      <Label id="num1" layoutX="39.0" layoutY="52.0" prefWidth="138.0" text="Número 1" AnchorPane.rightAnchor="163.0">
          <padding>
             <Insets right="50.0" />
          </padding>
          <font>
-            <Font name="Britannic Bold" size="20.0" />
+            <Font name="Arial" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="39.0" layoutY="101.0" text="Numero 2" AnchorPane.rightAnchor="162.6">
+      <Label id="num2" layoutX="39.0" layoutY="101.0" text="Numero 2" AnchorPane.rightAnchor="162.6">
          <padding>
             <Insets right="50.0" />
          </padding>
          <font>
-            <Font name="Britannic Bold" size="20.0" />
+            <Font name="Britannic Bold" size="12.0" />
          </font>
       </Label>
-      <ChoiceBox fx:id="choiceBox" layoutX="94.0" layoutY="147.0" prefWidth="150.0" />
-      <Button layoutX="118.0" layoutY="189.0" mnemonicParsing="false" onAction="#accionBoton" text="Resolver">
+      <ChoiceBox id="choiceBox" fx:id="choiceBox" layoutX="94.0" layoutY="147.0" prefWidth="150.0" />
+      <Button id="boton" layoutX="114.0" layoutY="183.0" mnemonicParsing="false" onAction="#accionBoton" text="Resolver">
          <font>
-            <Font name="Britannic Bold" size="20.0" />
+            <Font name="Arial" size="12.0" />
          </font>
       </Button>
-      <TextField fx:id="resultado" layoutX="95.0" layoutY="238.0" />
-      <ListView fx:id="listView" layoutY="286.0" prefHeight="115.0" prefWidth="340.0" />
+      <TextField id="resultado" fx:id="resultado" layoutX="95.0" layoutY="238.0" />
+      <ListView id="lista" fx:id="listView" layoutY="286.0" prefHeight="114.0" prefWidth="340.0" />
+      <Button id="tema" layoutX="13.0" layoutY="14.0" mnemonicParsing="false" onAction="#accionTema" prefHeight="22.0" prefWidth="34.0">
+         <graphic>
+            <ImageView fitHeight="18.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@pictures/274444.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
    </children>
 </AnchorPane>
