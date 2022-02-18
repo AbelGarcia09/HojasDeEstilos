@@ -1,8 +1,7 @@
 #boton{
-    -fx-background-color: #029CE6;
+    -fx-background-color: #996E18;
     -fx-background-radius: 30px;
-    -fx-font-family: "Britannic Bold";
-    -fx-font-size: 20px;
+    -fx-font-size: 17px;
     -fx-border-radius: 30px;
     -fx-border-color: white;
     -fx-border-width: 4px;
@@ -15,7 +14,7 @@
     -fx-border-radius: 30px;
 }
 #choiceBox{
-    -fx-background-color: cyan;
+    -fx-background-color: #FFC95C;
     -fx-border-color: black;
 }
 .choice-box .label {
@@ -28,13 +27,15 @@
     -fx-background-color: white;
 }
 #num1{
-    -fx-font-family: "Britannic Bold";
-    -fx-font-size: 20px;
+    
+    -fx-font-size: 17px;
 }
 #num2{
-    -fx-font-family: "Britannic Bold";
-    -fx-font-size: 20px;
+    
+    -fx-font-size: 17px;
 }
 .root{
-    -fx-background-color: black;
+    -fx-background-color: #E6AE3B;
+    -fx-font-family: "Latin";
+    -fx-font-weight: bold;
 }

@@ -5,19 +5,13 @@
 package es.ideas.controller;
 
 import es.ideas.App;
-import java.io.IOException;
 import java.net.URL;
-import java.util.Locale;
 import java.util.ResourceBundle;
-import static javafx.application.Application.setUserAgentStylesheet;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ListView;
@@ -98,26 +92,22 @@ public class Controlador implements Initializable {
 
     @FXML
     private void accionTema(ActionEvent event) {
-            try {
-                    //Creamos un nuevo Parent con la nueva Localización
-                    Parent pane = getFXMLLoader().load();
-                    
-                    //Cargamos este parent en nuestra vista
-                    App.getStage().getScene().setRoot(pane);
-                } catch (IOException ieo) {
-                }
-                //Mostramos nuestra vista
-                App.getStage().show();
+
+        String estilo1 = App.class.getResource("css/estilo.css").toExternalForm();
+        String estilo2 = App.class.getResource("css/estilo2.css").toExternalForm();
+        String estilo3 = App.class.getResource("css/estilo3.css").toExternalForm();
         
-       
+        if (ap.getStylesheets().get(0).contains("estilo.css")) {
+            ap.getStylesheets().remove(0);
+            ap.getStylesheets().add(estilo2);
+        } else if (ap.getStylesheets().get(0).contains("estilo2.css")) {
+            ap.getStylesheets().remove(0);
+            ap.getStylesheets().add(estilo3);
+        } else if (ap.getStylesheets().get(0).contains("estilo3.css")) {
+            ap.getStylesheets().remove(0);
+            ap.getStylesheets().add(estilo1);
+        }
+
     }
 
-    private FXMLLoader getFXMLLoader() {
-        FXMLLoader loader = new FXMLLoader();
-        //Le da a nuestro FXMLLoder la dirección del archivo .properties
-
-        //Le cambia la location al fxml. Para que vuelva a cargarse en el idioma deseado
-        loader.setLocation(getClass().getResource("primary.fxml"));
-        return loader;
-    }
 }

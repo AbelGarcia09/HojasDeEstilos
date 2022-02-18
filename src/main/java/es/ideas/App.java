@@ -35,11 +35,6 @@ public class App extends Application {
         stage.show();
         
     }
-    
-    //Método getStage para poder utilizar el Stage en otras clases
-    public static Stage getStage(){
-        return escena;
-    }
 
     public static void main(String[] args) {
         launch();

@@ -15,7 +15,7 @@
    <children>
       <TextField fx:id="num1" layoutX="151.0" layoutY="48.0" prefHeight="35.0" prefWidth="138.0" />
       <TextField fx:id="num2" layoutX="151.0" layoutY="99.0" prefHeight="22.0" prefWidth="138.0" />
-      <Label id="num1" layoutX="39.0" layoutY="52.0" prefWidth="138.0" text="Número 1" AnchorPane.rightAnchor="163.0">
+      <Label id="num1" layoutX="39.0" layoutY="52.0" prefHeight="22.0" prefWidth="138.0" text="Número 1" AnchorPane.rightAnchor="163.0">
          <padding>
             <Insets right="50.0" />
          </padding>
@@ -23,7 +23,7 @@
             <Font name="Arial" size="12.0" />
          </font>
       </Label>
-      <Label id="num2" layoutX="39.0" layoutY="101.0" text="Numero 2" AnchorPane.rightAnchor="162.6">
+      <Label id="num2" layoutX="39.0" layoutY="101.0" prefHeight="22.0" prefWidth="138.0" text="Numero 2" AnchorPane.rightAnchor="163.0">
          <padding>
             <Insets right="50.0" />
          </padding>
@@ -32,12 +32,12 @@
          </font>
       </Label>
       <ChoiceBox id="choiceBox" fx:id="choiceBox" layoutX="94.0" layoutY="147.0" prefWidth="150.0" />
-      <Button id="boton" layoutX="114.0" layoutY="183.0" mnemonicParsing="false" onAction="#accionBoton" text="Resolver">
+      <Button id="boton" layoutX="93.0" layoutY="182.0" mnemonicParsing="false" onAction="#accionBoton" prefHeight="47.0" prefWidth="150.0" text="Resolver">
          <font>
             <Font name="Arial" size="12.0" />
          </font>
       </Button>
-      <TextField id="resultado" fx:id="resultado" layoutX="95.0" layoutY="238.0" />
+      <TextField id="resultado" fx:id="resultado" layoutX="95.0" layoutY="238.0" prefHeight="22.0" prefWidth="150.0" />
       <ListView id="lista" fx:id="listView" layoutY="286.0" prefHeight="114.0" prefWidth="340.0" />
       <Button id="tema" layoutX="13.0" layoutY="14.0" mnemonicParsing="false" onAction="#accionTema" prefHeight="22.0" prefWidth="34.0">
          <graphic>

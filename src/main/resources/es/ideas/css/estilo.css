@@ -1,7 +1,6 @@
 #boton{
     -fx-background-color: #029CE6;
     -fx-background-radius: 30px;
-    -fx-font-family: "Britannic Bold";
     -fx-font-size: 20px;
     -fx-border-radius: 30px;
     -fx-border-color: white;
@@ -28,13 +27,12 @@
     -fx-background-color: white;
 }
 #num1{
-    -fx-font-family: "Britannic Bold";
     -fx-font-size: 20px;
 }
 #num2{
-    -fx-font-family: "Britannic Bold";
     -fx-font-size: 20px;
 }
 .root{
     -fx-background-color: #0AF2BE;
+    -fx-font-family: "Britannic Bold";
 }
