@@ -93,10 +93,15 @@ public class Controlador implements Initializable {
     @FXML
     private void accionTema(ActionEvent event) {
 
+        //Guardo el resource de cada estilo en Strings.
         String estilo1 = App.class.getResource("css/estilo.css").toExternalForm();
         String estilo2 = App.class.getResource("css/estilo2.css").toExternalForm();
         String estilo3 = App.class.getResource("css/estilo3.css").toExternalForm();
         
+        /*Si se está usando el estilo 1, se eliminará y se añadirá el siguiente.
+        Así sucesivamente hasta llegar el estilo 3, y vuelta a empezar.
+        Para ello obtengo el stylesheet del AnchorPane principal y pregunto 
+        si contiene el nombre de la hoja*/
         if (ap.getStylesheets().get(0).contains("estilo.css")) {
             ap.getStylesheets().remove(0);
             ap.getStylesheets().add(estilo2);
